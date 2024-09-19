@@ -267,8 +267,8 @@ end
 
 function LoadSettings()
     if readfile and writefile and isfile and isfolder then
-        if not isfolder("  tuandz Hub") then
-            makefolder("tuandz Hub")
+        if not isfolder("  tuandzHub") then
+            makefolder(" tuandzHub")
         end
         if not isfolder("tuandz Hub/Blox Fruits/") then
             makefolder("tuandz Hub/Blox Fruits/")
@@ -340,9 +340,9 @@ repeat wait(0) until game:IsLoaded()
 -- [Anti AFK]
 
 game:GetService("Players").LocalPlayer.Idled:connect(function()
-game:GetService("VirtualUser"):Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+game:GetService("VirtualUser"):Button2Down(tuandz Hub2.new(0, 0), workspace.CurrentCamera.CFrame)
 wait(1)
-game:GetService("VirtualUser"):Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+game:GetService("VirtualUser"):Button2Up(tuandz Hub2.new(0, 0), workspace.CurrentCamera.CFrame)
 end)
 
 -- [Functions Equip Weapon]
@@ -492,7 +492,7 @@ local function QuestCheck()
         }
     end
     
-    --game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
+    --game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875))
     local GuideModule = require(game:GetService("ReplicatedStorage").GuideModule)
     local Quests = require(game:GetService("ReplicatedStorage").Quests)
     for i,v in pairs(GuideModule["Data"]["NPCList"]) do
@@ -516,13 +516,13 @@ local function QuestCheck()
     end
     if Lvl >= 375 and Lvl <= 399 then -- Fishman Warrior
         if _G.AutoFarm and (NPCPosition.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 3000 then
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875))
         end
     end
 
     if Lvl >= 400 and Lvl <= 449 then -- Fishman Commando
         if _G.AutoFarm and (NPCPosition.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 3000 then
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875))
         end
     end
     for i,v in pairs(Quests) do
@@ -638,8 +638,8 @@ spawn(function()
                     local Noclip = Instance.new("BodyVelocity")
                     Noclip.Name = "BodyClip"
                     Noclip.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
-                    Noclip.MaxForce = Vector3.new(100000,100000,100000)
-                    Noclip.Velocity = Vector3.new(0,0,0)
+                    Noclip.MaxForce = tuandz Hub3.new(100000,100000,100000)
+                    Noclip.Velocity = tuandz Hub3.new(0,0,0)
                 end
                 if not game.Players.LocalPlayer.Character:FindFirstChild("Highlight") then
                     local Highlight = Instance.new("Highlight")
@@ -716,7 +716,7 @@ task.spawn(function()
                             v.HumanoidRootPart.CFrame = PosMon
                             v.Humanoid.JumpPower = 0
                             v.Humanoid.WalkSpeed = 0
-                            v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                            v.HumanoidRootPart.Size = tuandz Hub3.new(60,60,60)
                             v.HumanoidRootPart.Transparency = 1
                             v.HumanoidRootPart.CanCollide = false
                             v.Head.CanCollide = false
@@ -744,7 +744,7 @@ task.spawn(function()
                             v.HumanoidRootPart.CFrame = PosMon
                             v.Humanoid.JumpPower = 0
                             v.Humanoid.WalkSpeed = 0
-                            v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                            v.HumanoidRootPart.Size = tuandz Hub3.new(60,60,60)
                             v.HumanoidRootPart.Transparency = 1
                             v.HumanoidRootPart.CanCollide = false
                             v.Head.CanCollide = false
@@ -957,7 +957,7 @@ local function GetIsLand(...)
 local RealtargetPos = { ... }
 local targetPos = RealtargetPos[1]
 local RealTarget
-if type(targetPos) == "vector" then
+if type(targetPos) == "tuandz Hub" then
 RealTarget = targetPos
 elseif type(targetPos) == "userdata" then
 RealTarget = targetPos.Position
@@ -986,7 +986,7 @@ local function toTarget(...)
 local RealtargetPos = { ... }
 local targetPos = RealtargetPos[1]
 local RealTarget
-if type(targetPos) == "vector" then
+if type(targetPos) == "tuandz Hub" then
 RealTarget = CFrame.new(targetPos)
 elseif type(targetPos) == "userdata" then
 RealTarget = targetPos
@@ -1080,7 +1080,7 @@ local function Bypass(Position)
     _G.StopTween =  true
     if W3 then
         if (CFramePos.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude >= 4000 then
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-5076.60107, 314.54129, -3152.13086, 0.351963997, -4.56893581e-08, -0.93601352, 6.84364423e-08, 1, -2.30789325e-08, 0.93601352, -5.59344855e-08, 0.351963997))
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(-5076.60107, 314.54129, -3152.13086, 0.351963997, -4.56893581e-08, -0.93601352, 6.84364423e-08, 1, -2.30789325e-08, 0.93601352, -5.59344855e-08, 0.351963997))
         end
     end
     
@@ -1365,7 +1365,7 @@ end
 --[[Function Click]]
 function Click()
 game:GetService("VirtualUser"):CaptureController()
-game:GetService("VirtualUser"):Button1Down(Vector2.new(1280, 672))
+game:GetService("VirtualUser"):Button1Down(tuandz Hub2.new(1280, 672))
 end
 
 function GetFightingStyle(Style)
@@ -1547,7 +1547,7 @@ end
 
 --[[page/Tab]]
     local Update =  loadstring(Game:HttpGet"https://raw.githubusercontent.com/Hmmm213/Uitur/main/README.md")()
-    local Library = Update:Window("Vector Hub","",Enum.KeyCode.F1);
+    local Library = Update:Window("tuandz Hub Hub","",Enum.KeyCode.F1);
     local page1 = Library:Tab("General","rbxassetid://11446900930")
     local page2 = Library:Tab("Setting","rbxassetid://11446835336")
     local page3 = Library:Tab("Stats","rbxassetid://7040410130")
@@ -1563,7 +1563,7 @@ end
     local page15 = Library:Tab("Kitsune","rbxassetid://8028233454")
     local page11 = Library:Tab("Shop","rbxassetid://6031265976")
     local page12 = Library:Tab("Misc","rbxassetid://11447063791")
-page1:Seperator("Vector Hub")
+page1:Seperator("tuandz Hub Hub")
 Time = page1:Label("..")
 page1:Label("Username : "..game.Players.LocalPlayer.DisplayName)
 function UpdateTime()
@@ -1717,7 +1717,7 @@ while wait(.1) do
                             v.HumanoidRootPart.CanCollide = false
                             v.Humanoid.WalkSpeed = 0
                             v.Head.CanCollide = false
-                            v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                            v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                             v.Humanoid:ChangeState(11)
                             v.Humanoid:ChangeState(14)
                             v.Humanoid:ChangeState(16)
@@ -1726,7 +1726,7 @@ while wait(.1) do
                             toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
                             if not FastAttack then
                             game:GetService 'VirtualUser':CaptureController()
-                            game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                            game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                             end
                             
                             PosMon = v.HumanoidRootPart.CFrame
@@ -1786,7 +1786,7 @@ end
 													game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("AbandonQuest")
 												else
 													PosMon = v.HumanoidRootPart.CFrame
-													v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+													v.HumanoidRootPart.Size = tuandz Hub3.new(60,60,60)
 													v.HumanoidRootPart.CanCollide = false
 													v.Humanoid.WalkSpeed = 0
 													v.Head.CanCollide = false
@@ -1863,7 +1863,7 @@ end
 			local QuestC = game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest
 			CFrameMon = CFrame.new(-7719.66895, 5611.42334, -1445.98816, 0.906745553, -1.43169192e-08, -0.421678245, 5.939971e-08, 1, 9.37764852e-08, 0.421678245, -1.10078972e-07, 0.906745553)
 			if _G.AutoFarm and MyLevel >= 15 and MyLevel <= 69 and (CFrameMon.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 1000 then
-				game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-7894.6176757813, 5547.1416015625, -380.29119873047))
+				game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(-7894.6176757813, 5547.1416015625, -380.29119873047))
 			end
 			if MyLevel >= 15 and MyLevel <= 69 then
 				for i,v in pairs(game.Workspace.Enemies:GetChildren()) do
@@ -1883,7 +1883,7 @@ end
 								end
 								_G.FastType = "Slow"
 								PosMon = v.HumanoidRootPart.CFrame
-								v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+								v.HumanoidRootPart.Size = tuandz Hub3.new(60,60,60)
 								v.HumanoidRootPart.Transparency = 1
 								toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
 								if not _G.AutoFarm or not _G.Auto_Farm_LevelO or _G.Auto_Farm_Level or _G.Auto_Farm_LevelO or _G.SuperFastAttack then
@@ -1913,7 +1913,7 @@ end
 
 								EquipWeapon(_G.SelectWeapon)
 								toTarget(game:GetService("Players")[getgenv().SelectPly].Character.HumanoidRootPart.CFrame * CFrame.new(0,0,5))
-								game:GetService("Players")[getgenv().SelectPly].Character.HumanoidRootPart.Size = Vector3.new(120,120,120)
+								game:GetService("Players")[getgenv().SelectPly].Character.HumanoidRootPart.Size = tuandz Hub3.new(120,120,120)
 								if (game:GetService("Players")[getgenv().SelectPly].Character.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 6 then
 								game:service('VirtualInputManager'):SendKeyEvent(true, "X", false, game)
 								game:service('VirtualInputManager'):SendKeyEvent(false, "X", false, game)
@@ -1943,7 +1943,7 @@ end
 						if _G.AutoFarm and BringMob and v.Name == Mon and (v.HumanoidRootPart.Position - PosMon.Position).magnitude <= 200 then
 							v.HumanoidRootPart.CFrame = PosMon
 							v.HumanoidRootPart.CanCollide = false
-							v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+							v.HumanoidRootPart.Size = tuandz Hub3.new(60,60,60)
 							if v.Humanoid:FindFirstChild("Animator") then
 								v.Humanoid.Animator:Destroy()
 							end
@@ -2099,9 +2099,9 @@ end
                                             FastAttack = true
                                             if not _G.FastAttack then
                                                 game:GetService 'VirtualUser':CaptureController()
-                                                game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                             end
-                                            v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                            v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                             v.Humanoid.JumpPower = 0
                                             v.Humanoid.WalkSpeed = 0
                                             v.HumanoidRootPart.CanCollide = false
@@ -2216,9 +2216,9 @@ end
                                                         PosMon = v.HumanoidRootPart.CFrame
                                                         if not _G.FastAttack then
                                                         game:GetService 'VirtualUser':CaptureController()
-                                                        game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                        game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                         end
-                                                        v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                        v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                         v.Humanoid.JumpPower = 0
                                                         v.Humanoid.WalkSpeed = 0
                                                         v.HumanoidRootPart.CanCollide = false
@@ -2261,9 +2261,9 @@ end
                                         PosMon = v.HumanoidRootPart.CFrame
                                         if not _G.FastAttack then
                                             game:GetService 'VirtualUser':CaptureController()
-                                            game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                            game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                         end
-                                        v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                        v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                         v.Humanoid.JumpPower = 0
                                         v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.CanCollide = false
@@ -2330,9 +2330,9 @@ end
                                             PosMon = v.HumanoidRootPart.CFrame
                                             if not _G.FastAttack then
                                                 game:GetService 'VirtualUser':CaptureController()
-                                                game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                             end
-                                            v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                            v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                             v.Humanoid.JumpPower = 0
                                             v.HumanoidRootPart.CanCollide = false
                                             v.Humanoid.WalkSpeed = 0
@@ -2537,9 +2537,9 @@ end
                                                                                 PosMon = v.HumanoidRootPart.CFrame
                                                                                 if not _G.FastAttack then
                                                                                     game:GetService 'VirtualUser':CaptureController()
-                                                                                    game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                                                    game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                                                 end
-                                                                                v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                                                v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                                                 v.Humanoid.JumpPower = 0
                                                                                 v.HumanoidRootPart.CanCollide = false
                                                                                 v.Humanoid.WalkSpeed = 0
@@ -2589,9 +2589,9 @@ end
                                                                                 PosMon = v.HumanoidRootPart.CFrame
                                                                                 if not _G.FastAttack then
                                                                                     game:GetService 'VirtualUser':CaptureController()
-                                                                                    game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                                                    game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                                                 end
-                                                                                v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                                                v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                                                 v.Humanoid.JumpPower = 0
                                                                                 v.HumanoidRootPart.CanCollide = false
                                                                                 v.Humanoid.WalkSpeed = 0
@@ -2680,9 +2680,9 @@ end
                                                                                     PosMon = v.HumanoidRootPart.CFrame
                                                                                     if not _G.FastAttack then
                                                                                         game:GetService 'VirtualUser':CaptureController()
-                                                                                        game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                                                        game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                                                     end
-                                                                                    v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                                                    v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                                                     v.Humanoid.JumpPower = 0
                                                                                     v.HumanoidRootPart.CanCollide = false
                                                                                     v.Humanoid.WalkSpeed = 0
@@ -2739,9 +2739,9 @@ end
                                                                             PosMon = v.HumanoidRootPart.CFrame
                                                                             if not _G.FastAttack then
                                                                                 game:GetService 'VirtualUser':CaptureController()
-                                                                                game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                                                game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                                             end
-                                                                            v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                                            v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                                             v.Humanoid.JumpPower = 0
                                                                             v.Humanoid.WalkSpeed = 0
                                                                             v.HumanoidRootPart.CanCollide = false
@@ -2800,7 +2800,7 @@ end
                                         if _G.Auto_Evo_Race_V2 and StartEvoMagnet and v.Name == "Swan Pirate" and (v.HumanoidRootPart.Position - PosMonEvo.Position).magnitude <= 350 then
                                             v.HumanoidRootPart.CFrame = PosMonEvo
                                             v.HumanoidRootPart.CanCollide = false
-                                            v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                                            v.HumanoidRootPart.Size = tuandz Hub3.new(50,50,50)
                                             if v.Humanoid:FindFirstChild("Animator") then
                                                 v.Humanoid.Animator:Destroy()
                                             end
@@ -2820,7 +2820,7 @@ end
                                         if not game:GetService("Players").LocalPlayer.Data.Race:FindFirstChild("Evolved") then
                                             if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Alchemist","1") == 0 then
                                                 two(CFrame.new(-2779.83521, 72.9661407, -3574.02002, -0.730484903, 6.39014104e-08, -0.68292886, 3.59963224e-08, 1, 5.50667032e-08, 0.68292886, 1.56424669e-08, -0.730484903))
-                                                if (Vector3.new(-2779.83521, 72.9661407, -3574.02002) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 4 then
+                                                if (tuandz Hub3.new(-2779.83521, 72.9661407, -3574.02002) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 4 then
                                                     wait(1.3)
                                                     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Alchemist","2")
                                                 end
@@ -2839,9 +2839,9 @@ end
                                                                         EquipWeapon(_G.SelectWeapon)
                                                                         two(v.HumanoidRootPart.CFrame * MethodFarm)
                                                                         v.HumanoidRootPart.CanCollide = false
-                                                                        v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                                                                        v.HumanoidRootPart.Size = tuandz Hub3.new(50,50,50)
                                                                         game:GetService'VirtualUser':CaptureController()
-                                                                        game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                                        game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                                         PosMonEvo = v.HumanoidRootPart.CFrame
                                                                         StartEvoMagnet = true
                                                                     until game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Flower 3") or not v.Parent or v.Humanoid.Health <= 0 or _G.Auto_Evo_Race_V2 == false
@@ -2873,7 +2873,7 @@ end
                                 if not game:GetService("Players").LocalPlayer.Data.Race:FindFirstChild("Evolved") then
                                     if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Alchemist","1") == 0 then
                                         two(CFrame.new(-2779.83521, 72.9661407, -3574.02002, -0.730484903, 6.39014104e-08, -0.68292886, 3.59963224e-08, 1, 5.50667032e-08, 0.68292886, 1.56424669e-08, -0.730484903))
-                                        if (Vector3.new(-2779.83521, 72.9661407, -3574.02002) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 4 then
+                                        if (tuandz Hub3.new(-2779.83521, 72.9661407, -3574.02002) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 4 then
                                             wait(1.3)
                                             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Alchemist","2")
                                         end
@@ -2892,9 +2892,9 @@ end
                                                                 EquipWeapon(_G.SelectWeapon)
                                                                 two(v.HumanoidRootPart.CFrame * MethodFarm)
                                                                 v.HumanoidRootPart.CanCollide = false
-                                                                v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                                                                v.HumanoidRootPart.Size = tuandz Hub3.new(50,50,50)
                                                                 game:GetService'VirtualUser':CaptureController()
-                                                                game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                                game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                                 PosMonEvo = v.HumanoidRootPart.CFrame
                                                                 StartEvoMagnet = true
                                                             until game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Flower 3") or not v.Parent or v.Humanoid.Health <= 0 or _G.Auto_Evo_Race_V2 == false
@@ -2981,9 +2981,9 @@ end
                                                                                         PosMon = v.HumanoidRootPart.CFrame
                                                                                         if not _G.FastAttack then
                                                                                             game:GetService "VirtualUser":CaptureController()
-                                                                                            game:GetService "VirtualUser":Button1Down(Vector2.new(1280, 672))
+                                                                                            game:GetService "VirtualUser":Button1Down(tuandz Hub2.new(1280, 672))
                                                                                         end
-                                                                                        v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                                                        v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                                                         v.Humanoid.JumpPower = 0
                                                                                         v.Humanoid.WalkSpeed = 0
                                                                                         v.HumanoidRootPart.CanCollide = false
@@ -3063,9 +3063,9 @@ end
                                                                         PosMon = v.HumanoidRootPart.CFrame
                                                                         if not _G.FastAttack then
                                                                             game:GetService "VirtualUser":CaptureController()
-                                                                            game:GetService "VirtualUser":Button1Down(Vector2.new(1280, 672))
+                                                                            game:GetService "VirtualUser":Button1Down(tuandz Hub2.new(1280, 672))
                                                                         end
-                                                                        v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                                        v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                                         v.Humanoid.JumpPower = 0
                                                                         v.Humanoid.WalkSpeed = 0
                                                                         v.HumanoidRootPart.CanCollide = false
@@ -3182,9 +3182,9 @@ task.spawn(
                                         PosMon = v.HumanoidRootPart.CFrame
                                         if not _G.FastAttack then
                                             game:GetService "VirtualUser":CaptureController()
-                                            game:GetService "VirtualUser":Button1Down(Vector2.new(1280, 672))
+                                            game:GetService "VirtualUser":Button1Down(tuandz Hub2.new(1280, 672))
                                         end
-                                        v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                        v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                         v.Humanoid.JumpPower = 0
                                         v.HumanoidRootPart.CanCollide = false
                                         v.Humanoid.WalkSpeed = 0
@@ -3254,9 +3254,9 @@ if game:GetService("Workspace").Enemies:FindFirstChild("Ship Deckhand") or game:
                     PosMon = v.HumanoidRootPart.CFrame
                     if not _G.FastAttack then
                         game:GetService 'VirtualUser':CaptureController()
-                        game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                        game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                     end
-                    v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                    v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                     v.Humanoid.JumpPower = 0
                     v.HumanoidRootPart.CanCollide = false
                     v.Humanoid.WalkSpeed = 0
@@ -3272,7 +3272,7 @@ if game:GetService("Workspace").Enemies:FindFirstChild("Ship Deckhand") or game:
     end
 else
     BringMob = false
-    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(923.21252441406, 126.9760055542, 32852.83203125))
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(923.21252441406, 126.9760055542, 32852.83203125))
                 end
             end
         end)
@@ -3319,7 +3319,7 @@ pcall(function()
                 EquipWeapon(_G.SelectWeapon)
                 if not _G.FastAttack then
                     game:GetService 'VirtualUser':CaptureController()
-                    game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                    game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                 end
                 toTarget(CFrame.new(456.917724609375, 182.5244903564453, -430.490966796875))
             until not _G.AutoFactory or workspace.Map.Dressrosa.SmileFactory.Door.Transparency == 0
@@ -3406,9 +3406,9 @@ end
                                         PosMon = v.HumanoidRootPart.CFrame
                                         if not _G.FastAttack then
                                             game:GetService 'VirtualUser':CaptureController()
-                                            game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                            game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                         end
-                                        v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                        v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                         v.Humanoid.JumpPower = 0
                                         v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.CanCollide = false
@@ -3467,9 +3467,9 @@ else
                                             PosMon = v.HumanoidRootPart.CFrame
                                             if not _G.FastAttack then
                                                 game:GetService 'VirtualUser':CaptureController()
-                                                game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                             end
-                                            v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                            v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                             v.Humanoid.JumpPower = 0
                                             v.Humanoid.WalkSpeed = 0
                                             v.HumanoidRootPart.CanCollide = false
@@ -3485,7 +3485,7 @@ else
                             else
                                 repeat
                                     task.wait()
-                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(2284.912109375, 15.537666320801, 905.48291015625))
+                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(2284.912109375, 15.537666320801, 905.48291015625))
                                 until (CFrame.new(2284.912109375, 15.537666320801, 905.48291015625).Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 4 or not _G.AutoSwanGlasses
                             end
                         end
@@ -3525,7 +3525,7 @@ else
                                 if _G.AutoRainbowHaki then
                                     if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == false then
                                         toTarget(CFrame.new(-11892.0703125, 930.57672119141, -8760.1591796875))
-                                        if (Vector3.new(-11892.0703125, 930.57672119141, -8760.1591796875) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 30 then
+                                        if (tuandz Hub3.new(-11892.0703125, 930.57672119141, -8760.1591796875) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 30 then
                                             wait(1.5)
                                             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("HornedMan",
                                                 "Bet")
@@ -3550,9 +3550,9 @@ else
                                                         PosMon = v.HumanoidRootPart.CFrame
                                                         if not _G.FastAttack then
                                                             game:GetService 'VirtualUser':CaptureController()
-                                                            game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                            game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                         end
-                                                        v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                        v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                         v.Humanoid.JumpPower = 0
                                                         v.Humanoid.WalkSpeed = 0
                                                         v.HumanoidRootPart.CanCollide = false
@@ -3588,9 +3588,9 @@ else
                                                         PosMon = v.HumanoidRootPart.CFrame
                                                         if not _G.FastAttack then
                                                             game:GetService 'VirtualUser':CaptureController()
-                                                            game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                            game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                         end
-                                                        v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                        v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                         v.Humanoid.JumpPower = 0
                                                         v.Humanoid.WalkSpeed = 0
                                                         v.HumanoidRootPart.CanCollide = false
@@ -3626,9 +3626,9 @@ else
                                                         PosMon = v.HumanoidRootPart.CFrame
                                                         if not _G.FastAttack then
                                                             game:GetService 'VirtualUser':CaptureController()
-                                                            game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                            game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                         end
-                                                        v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                        v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                         v.Humanoid.JumpPower = 0
                                                         v.Humanoid.WalkSpeed = 0
                                                         v.HumanoidRootPart.CanCollide = false
@@ -3664,9 +3664,9 @@ else
                                                         PosMon = v.HumanoidRootPart.CFrame
                                                         if not _G.FastAttack then
                                                             game:GetService 'VirtualUser':CaptureController()
-                                                            game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                            game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                         end
-                                                        v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                        v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                         v.Humanoid.JumpPower = 0
                                                         v.Humanoid.WalkSpeed = 0
                                                         v.HumanoidRootPart.CanCollide = false
@@ -3702,9 +3702,9 @@ else
                                                         PosMon = v.HumanoidRootPart.CFrame
                                                         if not _G.FastAttack then
                                                             game:GetService 'VirtualUser':CaptureController()
-                                                            game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                            game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                         end
-                                                        v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                        v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                         v.Humanoid.JumpPower = 0
                                                         v.Humanoid.WalkSpeed = 0
                                                         v.HumanoidRootPart.CanCollide = false
@@ -3722,7 +3722,7 @@ else
                                         end
                                     else
                                         toTarget(CFrame.new(-11892.0703125, 930.57672119141, -8760.1591796875))
-                                        if (Vector3.new(-11892.0703125, 930.57672119141, -8760.1591796875) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 30 then
+                                        if (tuandz Hub3.new(-11892.0703125, 930.57672119141, -8760.1591796875) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 30 then
                                             wait(1.5)
                                             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("HornedMan","Bet")
                                         end
@@ -3758,7 +3758,7 @@ else
                                 repeat
                                     toTarget(CFrame.new(-12444.78515625, 332.40396118164, -7673.1806640625))
                                     task.wait()
-                                until not _G.AutoKenHakiV2 or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(-12444.78515625, 332.40396118164, -7673.1806640625)).Magnitude <= 10
+                                until not _G.AutoKenHakiV2 or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - tuandz Hub3.new(-12444.78515625, 332.40396118164, -7673.1806640625)).Magnitude <= 10
                                 wait(.5)
                                 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CitizenQuestProgress","Citizen")
                                 wait(1)
@@ -3768,14 +3768,14 @@ else
                                     repeat
                                         toTarget(CFrame.new(-12444.78515625, 332.40396118164, -7673.1806640625))
                                         task.wait()
-                                    until not _G.AutoKenHakiV2 or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(-12444.78515625, 332.40396118164, -7673.1806640625)).Magnitude <= 10
+                                    until not _G.AutoKenHakiV2 or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - tuandz Hub3.new(-12444.78515625, 332.40396118164, -7673.1806640625)).Magnitude <= 10
                                     wait(.5)
                                     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CitizenQuestProgress", "Citizen")
                                 elseif game.Players.LocalPlayer.Backpack:FindFirstChild("Fruit Bowl") or game.Players.LocalPlayer.Character:FindFirstChild("Fruit Bowl") then
                                     repeat
                                         toTarget(CFrame.new(-10920.125, 624.20275878906, -10266.995117188))
                                         task.wait()
-                                    until not _G.AutoKenHakiV2 or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(-10920.125, 624.20275878906, -10266.995117188)).Magnitude <= 10
+                                    until not _G.AutoKenHakiV2 or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - tuandz Hub3.new(-10920.125, 624.20275878906, -10266.995117188)).Magnitude <= 10
                                     wait(.5)
                                     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KenTalk2","Start")
                                     wait(1)
@@ -3800,9 +3800,9 @@ else
                                                     PosMon = v.HumanoidRootPart.CFrame
                                                     if not _G.FastAttack then
                                                         game:GetService 'VirtualUser':CaptureController()
-                                                        game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                        game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                     end
-                                                    v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                    v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                     v.Humanoid.JumpPower = 0
                                                     v.Humanoid.WalkSpeed = 0
                                                     v.HumanoidRootPart.CanCollide = false
@@ -3819,7 +3819,7 @@ else
                                         repeat
                                             toTarget(CFrame.new(-13277.568359375, 370.34185791016, -7821.1572265625))
                                             task.wait()
-                                        until not _G.AutoKenHakiV2 or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(-13277.568359375, 370.34185791016, -7821.1572265625)).Magnitude <= 10
+                                        until not _G.AutoKenHakiV2 or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - tuandz Hub3.new(-13277.568359375, 370.34185791016, -7821.1572265625)).Magnitude <= 10
                                     end
                                 elseif game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text == "Defeat  Captain Elephant (0/1)" then
                                     if game:GetService("Workspace").Enemies:FindFirstChild("Captain Elephant") then
@@ -3841,9 +3841,9 @@ else
                                                     PosMon = v.HumanoidRootPart.CFrame
                                                     if not _G.FastAttack then
                                                         game:GetService 'VirtualUser':CaptureController()
-                                                        game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                        game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                     end
-                                                    v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                    v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                     v.Humanoid.JumpPower = 0
                                                     v.Humanoid.WalkSpeed = 0
                                                     v.HumanoidRootPart.CanCollide = false
@@ -3860,7 +3860,7 @@ else
                                         repeat
                                             toTarget(CFrame.new(-13493.12890625, 318.89553833008, -8373.7919921875))
                                             task.wait()
-                                        until not _G.AutoKenHakiV2 or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Vector3.new(-13493.12890625, 318.89553833008, -8373.7919921875)).Magnitude <= 10
+                                        until not _G.AutoKenHakiV2 or (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - tuandz Hub3.new(-13493.12890625, 318.89553833008, -8373.7919921875)).Magnitude <= 10
                                     end
                                 else
                                     for i, v in pairs(game.Workspace:GetDescendants()) do
@@ -4090,10 +4090,10 @@ spawn(function()
                                 if v.Name == "Cursed Skeleton Boss" or v.Name == "Cursed Skeleton" then
                                     if v.Humanoid.Health > 0 then
                                         v.HumanoidRootPart.CanCollide = false
-                                        v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                                        v.HumanoidRootPart.Size = tuandz Hub3.new(60, 60, 60)
                                         toTarget(v.HumanoidRootPart.CFrame * CFrame.new(0,50,0))
                                         game:GetService'VirtualUser':CaptureController()
-                                        game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                        game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                     end
                                 end
                             end
@@ -4168,11 +4168,11 @@ spawn(function()
                 if Auto_Quest_Yama_2 and v:FindFirstChild("HazeESP") and (v.HumanoidRootPart.Position - PosMonsEsp.Position).magnitude <= 300 then
                     v.HumanoidRootPart.CFrame = PosMonsEsp
                     v.HumanoidRootPart.CanCollide = false
-                    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                    v.HumanoidRootPart.Size = tuandz Hub3.new(50,50,50)
                     if not v.HumanoidRootPart:FindFirstChild("BodyVelocity") then
                         local vc = Instance.new("BodyVelocity", v.HumanoidRootPart)
-                        vc.MaxForce = Vector3.new(1, 1, 1) * math.huge
-                        vc.Velocity = Vector3.new(0, 0, 0)
+                        vc.MaxForce = tuandz Hub3.new(1, 1, 1) * math.huge
+                        vc.Velocity = tuandz Hub3.new(0, 0, 0)
                     end
                 end
             end
@@ -4204,9 +4204,9 @@ spawn(function()
                                 PosMonsEsp = v.HumanoidRootPart.CFrame
                                 if not _G.FastAttack then
                                     game:GetService'VirtualUser':CaptureController()
-                                    game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                    game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                 end
-                                v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                                v.HumanoidRootPart.Size = tuandz Hub3.new(60,60,60)
                                 v.Humanoid.JumpPower = 0
                                 v.Humanoid.WalkSpeed = 0
                                 v.HumanoidRootPart.CanCollide = false
@@ -4258,9 +4258,9 @@ spawn(function()
                                             PosMonsEsp = v.HumanoidRootPart.CFrame
                                             if not _G.FastAttack then
                                                 game:GetService'VirtualUser':CaptureController()
-                                                game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                             end
-                                            v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                                            v.HumanoidRootPart.Size = tuandz Hub3.new(60,60,60)
                                             v.Humanoid.JumpPower = 0
                                             v.Humanoid.WalkSpeed = 0
                                             v.HumanoidRootPart.CanCollide = false
@@ -4342,10 +4342,10 @@ spawn(function()
                             if (v.HumanoidRootPart.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < 2000 then
                                 repeat wait()
                                     v.HumanoidRootPart.CanCollide = false
-                                    v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                                    v.HumanoidRootPart.Size = tuandz Hub3.new(60, 60, 60)
                                     toTarget(v.HumanoidRootPart.CFrame * CFrame.new(0,50,0))
                                     game:GetService'VirtualUser':CaptureController()
-                                    game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                    game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                 until v.Humanoid.Health <= 0 or not v.Parent or Auto_Quest_Tushita_2 == false
                             end
                         end
@@ -4379,9 +4379,9 @@ spawn(function()
                                         end
                                         if not _G.FastAttack then
                                             game:GetService'VirtualUser':CaptureController()
-                                            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                            game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                         end
-                                        v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                                        v.HumanoidRootPart.Size = tuandz Hub3.new(60,60,60)
                                         v.Humanoid.JumpPower = 0
                                         v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.CanCollide = false
@@ -4412,9 +4412,9 @@ spawn(function()
                                             end
                                             if not _G.FastAttack then
                                                 game:GetService'VirtualUser':CaptureController()
-                                                game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                             end
-                                            v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                                            v.HumanoidRootPart.Size = tuandz Hub3.new(60,60,60)
                                             v.Humanoid.JumpPower = 0
                                             v.Humanoid.WalkSpeed = 0
                                             v.HumanoidRootPart.CanCollide = false
@@ -4504,9 +4504,9 @@ spawn(function()
                                             PosMon = v.HumanoidRootPart.CFrame
                                             if not _G.FastAttack then
                                                 game:GetService'VirtualUser':CaptureController()
-                                                game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                             end
-                                            v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                                            v.HumanoidRootPart.Size = tuandz Hub3.new(60,60,60)
                                             v.Humanoid.JumpPower = 0
                                             v.Humanoid.WalkSpeed = 0
                                             v.HumanoidRootPart.CanCollide = false
@@ -4581,9 +4581,9 @@ spawn(function()
                                         PosMon = v.HumanoidRootPart.CFrame
                                         if not _G.FastAttack then
                                             game:GetService'VirtualUser':CaptureController()
-                                            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                            game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                         end
-                                        v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                                        v.HumanoidRootPart.Size = tuandz Hub3.new(60,60,60)
                                         v.Humanoid.JumpPower = 0
                                         v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.CanCollide = false
@@ -4628,9 +4628,9 @@ spawn(function()
                                         PosMon = v.HumanoidRootPart.CFrame
                                         if not _G.FastAttack then
                                             game:GetService'VirtualUser':CaptureController()
-                                            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                            game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                         end
-                                        v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                                        v.HumanoidRootPart.Size = tuandz Hub3.new(60,60,60)
                                         v.Humanoid.JumpPower = 0
                                         v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.CanCollide = false
@@ -4682,9 +4682,9 @@ spawn(function()
                                         PosMon = v.HumanoidRootPart.CFrame
                                         if not _G.FastAttack then
                                             game:GetService'VirtualUser':CaptureController()
-                                            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                            game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                         end
-                                        v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                                        v.HumanoidRootPart.Size = tuandz Hub3.new(60,60,60)
                                         v.Humanoid.JumpPower = 0
                                         v.Humanoid.WalkSpeed = 0
                                         v.HumanoidRootPart.CanCollide = false
@@ -4846,9 +4846,9 @@ if _G.Mode == "English" then
                                                                         PosMon = v.HumanoidRootPart.CFrame
                                                                         if not _G.FastAttack then
                                                                             game:GetService'VirtualUser':CaptureController()
-                                                                            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                                            game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                                         end
-                                                                        v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                                                                        v.HumanoidRootPart.Size = tuandz Hub3.new(60,60,60)
                                                                         v.Humanoid.JumpPower = 0
                                                                         v.Humanoid.WalkSpeed = 0
                                                                         v.HumanoidRootPart.CanCollide = false
@@ -5007,9 +5007,9 @@ if _G.Mode == "English" then
                                                                         PosMon = v.HumanoidRootPart.CFrame
                                                                         if not _G.FastAttack then
                                                                             game:GetService'VirtualUser':CaptureController()
-                                                                            game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                                            game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                                         end
-                                                                        v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                                                                        v.HumanoidRootPart.Size = tuandz Hub3.new(60,60,60)
                                                                         v.Humanoid.JumpPower = 0
                                                                         v.Humanoid.WalkSpeed = 0
                                                                         v.HumanoidRootPart.CanCollide = false
@@ -5279,12 +5279,12 @@ end
                                                     repeat wait()
                                                         PosMon = v.HumanoidRootPart.CFrame
                                                         EquipWeapon(_G.SelectWeapon)
-                                                        v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)  
+                                                        v.HumanoidRootPart.Size = tuandz Hub3.new(60, 60, 60)  
                                                         BringMob = true
                                                         toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
                                                         if (v.HumanoidRootPart.CFrame.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
                                                             game:GetService("VirtualUser"):CaptureController()
-                                                            game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+                                                            game:GetService("VirtualUser"):Button1Down(tuandz Hub2.new(1280,672))
                                                         end
                                                     until not _G.AutoCastleRaid or not v.Parent or v.Humanoid.Health <= 0
                                                     BringMob = false
@@ -5375,7 +5375,7 @@ spawn(function()
                     v.HumanoidRootPart.CanCollide = false
                     v.Humanoid.JumpPower = 0
                     v.Humanoid.WalkSpeed = 0
-                    v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                    v.HumanoidRootPart.Size = tuandz Hub3.new(50,50,50)
                     if v.Humanoid:FindFirstChild("Animator") then
                         v.Humanoid.Animator:Destroy()
                     end
@@ -5422,7 +5422,7 @@ spawn(function()
                                 if _v1:FindFirstChild("Humanoid") and _v1:FindFirstChild("HumanoidRootPart") and _v1.Humanoid.Health > 0 then
                                     repeat wait()
                                         EquipWeapon(_G.SelectWeapon)
-                                        _v1.HumanoidRootPart.Size = Vector3.new(60, 60, 60)  
+                                        _v1.HumanoidRootPart.Size = tuandz Hub3.new(60, 60, 60)  
                                         BringMob = true
                                         toTarget(_v1.HumanoidRootPart.CFrame * MethodFarm)
                                         if (_v1.HumanoidRootPart.CFrame.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
@@ -5446,7 +5446,7 @@ spawn(function()
                                                 repeat wait()
                                                     PosMon = v.HumanoidRootPart.CFrame
                                                     EquipWeapon(_G.SelectWeapon)
-                                                    v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)  
+                                                    v.HumanoidRootPart.Size = tuandz Hub3.new(60, 60, 60)  
                                                     BringMob = true
                                                     toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
                                                     if (v.HumanoidRootPart.CFrame.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
@@ -5550,7 +5550,7 @@ end)
                                                             return
                                                         end
                                                         EquipWeapon(_G.SelectWeapon)
-                                                        v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)  
+                                                        v.HumanoidRootPart.Size = tuandz Hub3.new(60, 60, 60)  
                                                         BringMob = true
                                                         toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
                                                         if (v.HumanoidRootPart.CFrame.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
@@ -5587,7 +5587,7 @@ end)
                                                         repeat wait()
                                                             PosMon = v.HumanoidRootPart.CFrame
                                                             EquipWeapon(_G.SelectWeapon)
-                                                            v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)  
+                                                            v.HumanoidRootPart.Size = tuandz Hub3.new(60, 60, 60)  
                                                             BringMob = true
                                                             toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
                                                             if (v.HumanoidRootPart.CFrame.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
@@ -5670,7 +5670,7 @@ end)
                                                             return
                                                         end
                                                         EquipWeapon(_G.SelectWeapon)
-                                                        v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)  
+                                                        v.HumanoidRootPart.Size = tuandz Hub3.new(60, 60, 60)  
                                                         BringMob = true
                                                         toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
                                                         if (v.HumanoidRootPart.CFrame.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
@@ -5707,7 +5707,7 @@ end)
                                                         repeat wait()
                                                             PosMon = v.HumanoidRootPart.CFrame
                                                             EquipWeapon(_G.SelectWeapon)
-                                                            v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)  
+                                                            v.HumanoidRootPart.Size = tuandz Hub3.new(60, 60, 60)  
                                                             BringMob = true
                                                             toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
                                                             if (v.HumanoidRootPart.CFrame.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 50 then
@@ -5781,7 +5781,7 @@ if _G.Mode == "English" then
                                                                     v5.Humanoid:ChangeState(14);
                                                                     v5.Humanoid:ChangeState(16);
                                                                     v5.Humanoid:ChangeState(11);
-                                                                    v5.HumanoidRootPart.Size = Vector3.new(55, 55, 55);
+                                                                    v5.HumanoidRootPart.Size = tuandz Hub3.new(55, 55, 55);
                                                                 end
                                                             end);
                                                         end
@@ -5803,16 +5803,16 @@ if _G.Mode == "English" then
                                 if (World1 and (table.find(MaterialMob, "Fishman Commando")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000)) then
                                     if Modstween then Modstween:Stop(); end
                                     wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
-                                        "requestEntrance", Vector3.new(61163.8515625, 11.6796875, 1819.7841796875));
+                                        "requestEntrance", tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875));
                                 elseif (World1 and not (table.find(MaterialMob, "Fishman Commando")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000)) then
                                     if Modstween then Modstween:Stop(); end
                                     wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
-                                        "requestEntrance", Vector3.new(3864.8515625, 6.6796875, -1926.7841796875));
+                                        "requestEntrance", tuandz Hub3.new(3864.8515625, 6.6796875, -1926.7841796875));
                                 elseif (World1 and (table.find(MaterialMob, "God's Guard")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 3000)) then
                                     if Modstween then Modstween:Stop(); end
                                     wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
                                         "requestEntrance",
-                                        Vector3.new(-4607.8227539063, 872.54248046875, -1667.5568847656));
+                                        tuandz Hub3.new(-4607.8227539063, 872.54248046875, -1667.5568847656));
                                 elseif ((CFrameMon.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150) then
                                     if Modstween then 
                                         Modstween:Stop()
@@ -5886,7 +5886,7 @@ if CustomFindFirstChild(MaterialMob) then
                                         v5.Humanoid:ChangeState(14);
                                         v5.Humanoid:ChangeState(16);
                                         v5.Humanoid:ChangeState(11);
-                                        v5.HumanoidRootPart.Size = Vector3.new(55, 55, 55);
+                                        v5.HumanoidRootPart.Size = tuandz Hub3.new(55, 55, 55);
                                     end
                                 end);
                             end
@@ -5908,14 +5908,14 @@ if CustomFindFirstChild(MaterialMob) then
                 if (World1 and (table.find(MaterialMob, "Fishman Commando")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000)) then
                     if Modstween then Modstween:Stop(); end
                     wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
-                        "requestEntrance", Vector3.new(61163.8515625, 11.6796875, 1819.7841796875));
+                        "requestEntrance", tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875));
                 elseif (World1 and not (table.find(MaterialMob, "Fishman Commando")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000)) then
                     if Modstween then Modstween:Stop(); end
                     wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
-                        "requestEntrance", Vector3.new(3864.8515625, 6.6796875, -1926.7841796875));
+                        "requestEntrance", tuandz Hub3.new(3864.8515625, 6.6796875, -1926.7841796875));
                 elseif (World1 and (table.find(MaterialMob, "God's Guard")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 3000)) then
                     if Modstween then Modstween:Stop(); end
-                    wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-4607.8227539063, 872.54248046875, -1667.5568847656));
+                    wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(-4607.8227539063, 872.54248046875, -1667.5568847656));
                 elseif ((CFrameMon.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150) then
                     if Modstween then 
                         Modstween:Stop()
@@ -5952,7 +5952,7 @@ if CustomFindFirstChild(MaterialMob) then
     end)
 end)   
 end              
-Vec("<Color=Yellow>Vector Hub loaded successfully<Color=/>")                                                               
+Vec("<Color=Yellow>tuandz Hub Hub loaded successfully<Color=/>")                                                               
 page2:Seperator("⚙️")
 if _G.Mode == "English"then
 local FastAttackType = {
@@ -6891,7 +6891,7 @@ if _G.Mode == "English" then
                                                                                     v2.Humanoid.WalkSpeed = 0
                                                                                     v2.HumanoidRootPart.CanCollide = false
                                                                                     v2.Humanoid:ChangeState(11)
-                                                                                    v2.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                                                    v2.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                                                 end
                                                                             end)
                                                                         end
@@ -6912,13 +6912,13 @@ if _G.Mode == "English" then
                                                 Modstween = toTarget(CFrameMon.Position, CFrameMon)
                                             if (World1 and (table.find(MaterialMob, "Fishman Commando")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000)) then
                                                 if Modstween then Modstween:Stop(); end
-                                                wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(61163.8515625, 11.6796875, 1819.7841796875));
+                                                wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875));
                                             elseif (World1 and not (table.find(MaterialMob, "Fishman Commando")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000)) then
                                                 if Modstween then Modstween:Stop(); end
-                                                wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(3864.8515625, 6.6796875, -1926.7841796875));
+                                                wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", tuandz Hub3.new(3864.8515625, 6.6796875, -1926.7841796875));
                                             elseif (World1 and (table.find(MaterialMob, "God's Guard")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 3000)) then
                                                 if Modstween then Modstween:Stop(); end
-                                                wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-4607.8227539063, 872.54248046875, -1667.5568847656));
+                                                wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(-4607.8227539063, 872.54248046875, -1667.5568847656));
                                             elseif ((CFrameMon.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150) then
                                                 if Modstween then 
                                                     Modstween:Stop()
@@ -6971,7 +6971,7 @@ if _G.Mode == "English" then
                                                                                 v2.Humanoid.WalkSpeed = 0
                                                                                 v2.HumanoidRootPart.CanCollide = false
                                                                                 v2.Humanoid:ChangeState(11)
-                                                                                v2.HumanoidRootPart.Size = Vector3.new(
+                                                                                v2.HumanoidRootPart.Size = tuandz Hub3.new(
                                                                                     80, 80, 80)
                                                                             end
                                                                         end)
@@ -6995,13 +6995,13 @@ if _G.Mode == "English" then
                                             Modstween = toTarget(CFrameMon.Position, CFrameMon)
                                             if (World1 and (table.find(MaterialMob, "Fishman Commando")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000)) then
                                                 if Modstween then Modstween:Stop(); end
-                                                wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(61163.8515625, 11.6796875, 1819.7841796875));
+                                                wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875));
                                             elseif (World1 and not (table.find(MaterialMob, "Fishman Commando")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000)) then
                                                 if Modstween then Modstween:Stop(); end
-                                                wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(3864.8515625, 6.6796875, -1926.7841796875));
+                                                wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", tuandz Hub3.new(3864.8515625, 6.6796875, -1926.7841796875));
                                             elseif (World1 and (table.find(MaterialMob, "God's Guard")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 3000)) then
                                                 if Modstween then Modstween:Stop(); end
-                                                wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-4607.8227539063, 872.54248046875, -1667.5568847656));
+                                                wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(-4607.8227539063, 872.54248046875, -1667.5568847656));
                                             elseif ((CFrameMon.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150) then
                                                 if Modstween then 
                                                     Modstween:Stop()
@@ -7054,7 +7054,7 @@ if _G.Mode == "English" then
                                                                             v2.Humanoid.WalkSpeed = 0
                                                                             v2.HumanoidRootPart.CanCollide = false
                                                                             v2.Humanoid:ChangeState(11)
-                                                                            v2.HumanoidRootPart.Size = Vector3.new(80, 80,80)
+                                                                            v2.HumanoidRootPart.Size = tuandz Hub3.new(80, 80,80)
                                                                         end
                                                                     end)
                                                                 end
@@ -7078,16 +7078,16 @@ if _G.Mode == "English" then
                                         if (World1 and (table.find(MaterialMob, "Fishman Commando")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000)) then
                                             if Modstween then Modstween:Stop(); end
                                             wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
-                                                "requestEntrance", Vector3.new(61163.8515625, 11.6796875, 1819.7841796875));
+                                                "requestEntrance", tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875));
                                         elseif (World1 and not (table.find(MaterialMob, "Fishman Commando")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000)) then
                                             if Modstween then Modstween:Stop(); end
                                             wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
-                                                "requestEntrance", Vector3.new(3864.8515625, 6.6796875, -1926.7841796875));
+                                                "requestEntrance", tuandz Hub3.new(3864.8515625, 6.6796875, -1926.7841796875));
                                         elseif (World1 and (table.find(MaterialMob, "God's Guard")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 3000)) then
                                             if Modstween then Modstween:Stop(); end
                                             wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
                                                 "requestEntrance",
-                                                Vector3.new(-4607.8227539063, 872.54248046875, -1667.5568847656));
+                                                tuandz Hub3.new(-4607.8227539063, 872.54248046875, -1667.5568847656));
                                         elseif ((CFrameMon.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150) then
                                             if Modstween then 
                                                 Modstween:Stop()
@@ -7140,7 +7140,7 @@ if _G.Mode == "English" then
                                                                         v2.Humanoid.WalkSpeed = 0
                                                                         v2.HumanoidRootPart.CanCollide = false
                                                                         v2.Humanoid:ChangeState(11)
-                                                                        v2.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                                        v2.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                                     end
                                                                 end)
                                                             end
@@ -7164,16 +7164,16 @@ if _G.Mode == "English" then
                                     if (World1 and (table.find(MaterialMob, "Fishman Commando")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000)) then
                                         if Modstween then Modstween:Stop(); end
                                         wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
-                                            "requestEntrance", Vector3.new(61163.8515625, 11.6796875, 1819.7841796875));
+                                            "requestEntrance", tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875));
                                     elseif (World1 and not (table.find(MaterialMob, "Fishman Commando")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000)) then
                                         if Modstween then Modstween:Stop(); end
                                         wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
-                                            "requestEntrance", Vector3.new(3864.8515625, 6.6796875, -1926.7841796875));
+                                            "requestEntrance", tuandz Hub3.new(3864.8515625, 6.6796875, -1926.7841796875));
                                     elseif (World1 and (table.find(MaterialMob, "God's Guard")) and ((CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 3000)) then
                                         if Modstween then Modstween:Stop(); end
                                         wait(0.5); game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(
                                             "requestEntrance",
-                                            Vector3.new(-4607.8227539063, 872.54248046875, -1667.5568847656));
+                                            tuandz Hub3.new(-4607.8227539063, 872.54248046875, -1667.5568847656));
                                     elseif ((CFrameMon.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150) then
                                         if Modstween then 
                                             Modstween:Stop()
@@ -7237,9 +7237,9 @@ if _G.Mode == "English" then
                                                 end
                                                 if not _G.FastAttack then
                                                     game:GetService 'VirtualUser':CaptureController()
-                                                    game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                    game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                 end
-                                                v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                                                v.HumanoidRootPart.Size = tuandz Hub3.new(60, 60, 60)
                                                 v.Humanoid.JumpPower = 0
                                                 v.Humanoid.WalkSpeed = 0
                                                 v.HumanoidRootPart.CanCollide = false
@@ -7735,7 +7735,7 @@ else
                                                                                         v2.Humanoid.WalkSpeed = 0
                                                                                         v2.HumanoidRootPart.CanCollide = false
                                                                                         v2.Humanoid:ChangeState(11)
-                                                                                        v2.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                                                        v2.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                                                     end
                                                                                 end)
                                                                             end
@@ -7757,15 +7757,15 @@ else
                                                     if World1 and (table.find(MaterialMob, "Fishman Commando")) and (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000 then
                                                         if Modstween then Modstween:Stop() end
                                                         wait(.5)
-                                                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
+                                                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875))
                                                     elseif World1 and not (table.find(MaterialMob, "Fishman Commando")) and (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000 then
                                                         if Modstween then Modstween:Stop() end
                                                         wait(.5)
-                                                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(3864.8515625, 6.6796875, -1926.7841796875))
+                                                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(3864.8515625, 6.6796875, -1926.7841796875))
                                                     elseif World1 and (table.find(MaterialMob, "God's Guard")) and (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 3000 then
                                                         if Modstween then Modstween:Stop() end
                                                         wait(.5)
-                                                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-4607.8227539063, 872.54248046875,-1667.5568847656))
+                                                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(-4607.8227539063, 872.54248046875,-1667.5568847656))
                                                     elseif (CFrameMon.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150 then
                                                         if Modstween then 
                                                             Modstween:Stop()
@@ -7818,7 +7818,7 @@ else
                                                                                     v2.Humanoid.WalkSpeed = 0
                                                                                     v2.HumanoidRootPart.CanCollide = false
                                                                                     v2.Humanoid:ChangeState(11)
-                                                                                    v2.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                                                                    v2.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                                                                 end
                                                                             end)
                                                                         end
@@ -7840,15 +7840,15 @@ else
                                                 if World1 and (table.find(MaterialMob, "Fishman Commando")) and (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000 then
                                                     if Modstween then Modstween:Stop() end
                                                     wait(.5)
-                                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
+                                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875))
                                                 elseif World1 and not (table.find(MaterialMob, "Fishman Commando")) and (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000 then
                                                     if Modstween then Modstween:Stop() end
                                                     wait(.5)
-                                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(3864.8515625, 6.6796875, -1926.7841796875))
+                                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(3864.8515625, 6.6796875, -1926.7841796875))
                                                 elseif World1 and (table.find(MaterialMob, "God's Guard")) and (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 3000 then
                                                     if Modstween then Modstween:Stop() end
                                                     wait(.5)
-                                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-4607.8227539063, 872.54248046875, -1667.5568847656))
+                                                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(-4607.8227539063, 872.54248046875, -1667.5568847656))
                                                 elseif (CFrameMon.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150 then
                                                     if Modstween then 
                                                         Modstween:Stop()
@@ -7900,7 +7900,7 @@ else
                                                                                 v2.Humanoid.WalkSpeed = 0
                                                                                 v2.HumanoidRootPart.CanCollide = false
                                                                                 v2.Humanoid:ChangeState(11)
-                                                                                v2.HumanoidRootPart.Size = Vector3.new(80, 80,80)
+                                                                                v2.HumanoidRootPart.Size = tuandz Hub3.new(80, 80,80)
                                                                             end
                                                                         end)
                                                                     end
@@ -7922,15 +7922,15 @@ else
                                             if World1 and (table.find(MaterialMob, "Fishman Commando")) and (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000 then
                                                 if Modstween then Modstween:Stop() end
                                                 wait(.5)
-                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
+                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875))
                                             elseif World1 and not (table.find(MaterialMob, "Fishman Commando")) and (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000 then
                                                 if Modstween then Modstween:Stop() end
                                                 wait(.5)
-                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(3864.8515625, 6.6796875, -1926.7841796875))
+                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(3864.8515625, 6.6796875, -1926.7841796875))
                                             elseif World1 and (table.find(MaterialMob, "God's Guard")) and (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 3000 then
                                                 if Modstween then Modstween:Stop() end
                                                 wait(.5)
-                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-4607.8227539063, 872.54248046875, -1667.5568847656))
+                                                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(-4607.8227539063, 872.54248046875, -1667.5568847656))
                                             elseif (CFrameMon.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150 then
                                                 if Modstween then 
                                                     Modstween:Stop()
@@ -7982,7 +7982,7 @@ else
                                                                             v2.Humanoid.WalkSpeed = 0
                                                                             v2.HumanoidRootPart.CanCollide = false
                                                                             v2.Humanoid:ChangeState(11)
-                                                                            v2.HumanoidRootPart.Size = Vector3.new(80, 80,80)
+                                                                            v2.HumanoidRootPart.Size = tuandz Hub3.new(80, 80,80)
                                                                         end
                                                                     end)
                                                                 end
@@ -8004,15 +8004,15 @@ else
                                         if World1 and (table.find(MaterialMob, "Fishman Commando")) and (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000 then
                                             if Modstween then Modstween:Stop() end
                                             wait(.5)
-                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
+                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875))
                                         elseif World1 and not (table.find(MaterialMob, "Fishman Commando")) and (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000 then
                                             if Modstween then Modstween:Stop() end
                                             wait(.5)
-                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", Vector3.new(3864.8515625, 6.6796875, -1926.7841796875))
+                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance", tuandz Hub3.new(3864.8515625, 6.6796875, -1926.7841796875))
                                         elseif World1 and (table.find(MaterialMob, "God's Guard")) and (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 3000 then
                                             if Modstween then Modstween:Stop() end
                                             wait(.5)
-                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-4607.8227539063, 872.54248046875, -1667.5568847656))
+                                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(-4607.8227539063, 872.54248046875, -1667.5568847656))
                                         elseif (CFrameMon.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150 then
                                             if Modstween then 
                                                 Modstween:Stop()
@@ -8076,9 +8076,9 @@ else
                                                 end
                                                 if not _G.FastAttack then
                                                     game:GetService 'VirtualUser':CaptureController()
-                                                    game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                    game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                 end
-                                                v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                                                v.HumanoidRootPart.Size = tuandz Hub3.new(60, 60, 60)
                                                 v.Humanoid.JumpPower = 0
                                                 v.Humanoid.WalkSpeed = 0
                                                 v.HumanoidRootPart.CanCollide = false
@@ -8569,9 +8569,9 @@ if _G.Mode == "English" then
                                                                 end
                                                                 if not _G.FastAttack then
                                                                     game:GetService 'VirtualUser':CaptureController()
-                                                                    game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                                    game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                                 end
-                                                                v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                                                                v.HumanoidRootPart.Size = tuandz Hub3.new(60, 60, 60)
                                                                 v.Humanoid.JumpPower = 0
                                                                 v.Humanoid.WalkSpeed = 0
                                                                 v.HumanoidRootPart.CanCollide = false
@@ -8670,9 +8670,9 @@ else
                                                                 end
                                                                 if not _G.FastAttack then
                                                                     game:GetService 'VirtualUser':CaptureController()
-                                                                    game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                                    game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                                 end
-                                                                v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                                                                v.HumanoidRootPart.Size = tuandz Hub3.new(60, 60, 60)
                                                                 v.Humanoid.JumpPower = 0
                                                                 v.Humanoid.WalkSpeed = 0
                                                                 v.HumanoidRootPart.CanCollide = false
@@ -8768,9 +8768,9 @@ if _G.Mode == "English" then
                                                                     end
                                                                     if not _G.FastAttack then
                                                                         game:GetService 'VirtualUser':CaptureController()
-                                                                        game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                                        game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                                     end
-                                                                    v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                                                                    v.HumanoidRootPart.Size = tuandz Hub3.new(60, 60, 60)
                                                                     v.Humanoid.JumpPower = 0
                                                                     v.Humanoid.WalkSpeed = 0
                                                                     v.HumanoidRootPart.CanCollide = false
@@ -8869,9 +8869,9 @@ else
                                                                     end
                                                                     if not _G.FastAttack then
                                                                         game:GetService 'VirtualUser':CaptureController()
-                                                                        game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                                        game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                                                     end
-                                                                    v.HumanoidRootPart.Size = Vector3.new(60, 60, 60)
+                                                                    v.HumanoidRootPart.Size = tuandz Hub3.new(60, 60, 60)
                                                                     v.Humanoid.JumpPower = 0
                                                                     v.Humanoid.WalkSpeed = 0
                                                                     v.HumanoidRootPart.CanCollide = false
@@ -9218,7 +9218,7 @@ elseif World2 then
     end
     if _G.SelectLocalTeleport == "Ghost Ship" then
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",
-            Vector3.new(923.21252441406, 126.9760055542, 32852.83203125))
+            tuandz Hub3.new(923.21252441406, 126.9760055542, 32852.83203125))
     end
 elseif World3 then
     if _G.SelectLocalTeleport == "Port Town" then
@@ -9227,14 +9227,14 @@ elseif World3 then
     if _G.SelectLocalTeleport == "Mansion" then
         local args = {
             [1] = "requestEntrance",
-            [2] = Vector3.new(-12548.595703125, 337.17001342773, -7554.6103515625)
+            [2] = tuandz Hub3.new(-12548.595703125, 337.17001342773, -7554.6103515625)
         }
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
     end
     if _G.SelectLocalTeleport == "Castle on the Sea" then
         local args = {
             [1] = "requestEntrance",
-            [2] = Vector3.new(-5079.44677734375, 313.7293395996094, -3151.065185546875)
+            [2] = tuandz Hub3.new(-5079.44677734375, 313.7293395996094, -3151.065185546875)
         }
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
     end
@@ -9389,7 +9389,7 @@ if _G.TeleportIsland then
         end
         if _G.SelectLocalTeleport == "Ghost Ship" then
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",
-                Vector3.new(923.21252441406, 126.9760055542, 32852.83203125))
+                tuandz Hub3.new(923.21252441406, 126.9760055542, 32852.83203125))
         end
     elseif World3 then
         if _G.SelectLocalTeleport == "Port Town" then
@@ -9398,14 +9398,14 @@ if _G.TeleportIsland then
         if _G.SelectLocalTeleport == "Mansion" then
             local args = {
                 [1] = "requestEntrance",
-                [2] = Vector3.new(-12548.595703125, 337.17001342773, -7554.6103515625)
+                [2] = tuandz Hub3.new(-12548.595703125, 337.17001342773, -7554.6103515625)
             }
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
         end
         if _G.SelectLocalTeleport == "Castle on the Sea" then
             local args = {
                 [1] = "requestEntrance",
-                [2] = Vector3.new(-5079.44677734375, 313.7293395996094, -3151.065185546875)
+                [2] = tuandz Hub3.new(-5079.44677734375, 313.7293395996094, -3151.065185546875)
             }
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
         end
@@ -9691,11 +9691,11 @@ pcall(function()
                         FastAttack = true
                         v.HumanoidRootPart.CanCollide = false
                         v.Humanoid.WalkSpeed = 0
-                        v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                        v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                         toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
                         if not FastAttack then
                         game:GetService("VirtualUser"):CaptureController()
-                        game:GetService("VirtualUser"):Button1Down(Vector2.new(1280, 672))
+                        game:GetService("VirtualUser"):Button1Down(tuandz Hub2.new(1280, 672))
                         end
                         sethiddenproperty(game:GetService("Players").LocalPlayer, "SimulationRadius",math.huge)
                     until not _G.AutoFarmBoss or not v.Parent or v.Humanoid.Health <= 0
@@ -9747,11 +9747,11 @@ pcall(function()
                 v.Humanoid.WalkSpeed = 0
                 v.HumanoidRootPart.CanCollide = false
                 v.Head.CanCollide = false
-                v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                 toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
                 if not FastAttack then 
                 game:GetService 'VirtualUser':CaptureController()
-                game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                 end
                 sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
             until v.Humanoid.Health <= 0 or _G.AutoAllBoss == false or not v.Parent 
@@ -9794,9 +9794,9 @@ page5:Seperator("💼")
                                             PosMon = v.HumanoidRootPart.CFrame
                                             if not _G.FastAttack then
                                                 game:GetService'VirtualUser':CaptureController()
-                                                game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                                game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                             end
-                                            v.HumanoidRootPart.Size = Vector3.new(60,60,60)
+                                            v.HumanoidRootPart.Size = tuandz Hub3.new(60,60,60)
                                             v.Humanoid.JumpPower = 0
                                             v.Humanoid.WalkSpeed = 0
                                             v.HumanoidRootPart.CanCollide = false
@@ -9846,9 +9846,9 @@ while task.wait() do
                             PosMon = v.HumanoidRootPart.CFrame
                             if not _G.FastAttack then
                                 game:GetService 'VirtualUser':CaptureController()
-                                game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                             end
-                            v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                            v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                             v.Humanoid.JumpPower = 0
                             v.Humanoid.WalkSpeed = 0
                             v.HumanoidRootPart.CanCollide = false
@@ -9900,9 +9900,9 @@ while task.wait() do
                                     PosMon = v.HumanoidRootPart.CFrame
                                     if not _G.FastAttack then
                                         game:GetService 'VirtualUser':CaptureController()
-                                        game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                        game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                     end
-                                    v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                    v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                     v.Humanoid.JumpPower = 0
                                     v.Humanoid.WalkSpeed = 0
                                     v.HumanoidRootPart.CanCollide = false
@@ -9920,7 +9920,7 @@ while task.wait() do
                     end
                 else
                     toTarget(CFrame.new(-12443.8671875, 332.40396118164, -7675.4892578125))
-                    if (Vector3.new(-12443.8671875, 332.40396118164, -7675.4892578125) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 30 then
+                    if (tuandz Hub3.new(-12443.8671875, 332.40396118164, -7675.4892578125) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 30 then
                         wait(1.5)
                         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("StartQuest","CitizenQuest", 1)
                     end
@@ -9947,9 +9947,9 @@ while task.wait() do
                                     PosMon = v.HumanoidRootPart.CFrame
                                     if not _G.FastAttack then
                                         game:GetService 'VirtualUser':CaptureController()
-                                        game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                        game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                     end
-                                    v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                                    v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                                     v.Humanoid.JumpPower = 0
                                     v.Humanoid.WalkSpeed = 0
                                     v.HumanoidRootPart.CanCollide = false
@@ -10013,9 +10013,9 @@ while task.wait() do
                             PosMon = v.HumanoidRootPart.CFrame
                             if not _G.FastAttack then
                                 game:GetService 'VirtualUser':CaptureController()
-                                game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                             end
-                            v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                            v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                             v.Humanoid.JumpPower = 0
                             v.Humanoid.WalkSpeed = 0
                             v.HumanoidRootPart.CanCollide = false
@@ -10083,9 +10083,9 @@ while task.wait() do
                         PosMon = v.HumanoidRootPart.CFrame
                         if not _G.FastAttack then
                             game:GetService 'VirtualUser':CaptureController()
-                            game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                            game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                         end
-                        v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                        v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                         v.Humanoid.JumpPower = 0
                         v.Humanoid.WalkSpeed = 0
                         v.HumanoidRootPart.CanCollide = false
@@ -10135,9 +10135,9 @@ while task.wait() do
                         PosMon = v.HumanoidRootPart.CFrame
                         if not _G.FastAttack then
                             game:GetService 'VirtualUser':CaptureController()
-                            game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                            game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                         end
-                        v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                        v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                         v.Humanoid.JumpPower = 0
                         v.Humanoid.WalkSpeed = 0
                         v.HumanoidRootPart.CanCollide = false
@@ -10187,9 +10187,9 @@ while task.wait() do
                             PosMon = v.HumanoidRootPart.CFrame
                             if not _G.FastAttack then
                                 game:GetService 'VirtualUser':CaptureController()
-                                game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                             end
-                            v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                            v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                             v.Humanoid.JumpPower = 0
                             v.Humanoid.WalkSpeed = 0
                             v.HumanoidRootPart.CanCollide = false
@@ -10283,7 +10283,7 @@ spawn(function()
             if tostring(args[1]) == "RemoteEvent" then
                 if tostring(args[2]) ~= "true" and tostring(args[2]) ~= "false" then
                     if UseSkillMasteryDevilFruit and _G.AutoFarmFruitMastery then
-                        if type(args[2]) == "vector" then
+                        if type(args[2]) == "tuandz Hub" then
                             args[2] = PositionSkillMasteryDevilFruit
                         else
                             args[2] = CFrame.new(PositionSkillMasteryDevilFruit)
@@ -10382,20 +10382,20 @@ spawn(function()
             if Questtween then Questtween:Stop() end
             wait(.5)
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",
-                Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
+                tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875))
         elseif World1 and not (Name == "Fishman Commando" or Name == "Fishman Warrior") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000 then
             if Questtween then Questtween:Stop() end
             wait(.5)
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",
-                Vector3.new(3864.8515625, 6.6796875, -1926.7841796875))
+                tuandz Hub3.new(3864.8515625, 6.6796875, -1926.7841796875))
         elseif World2 and string.find(Name, "Ship") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 30000 then
             if Questtween then Questtween:Stop() end
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",
-                Vector3.new(923.21252441406, 126.9760055542, 32852.83203125))
+                tuandz Hub3.new(923.21252441406, 126.9760055542, 32852.83203125))
         elseif World2 and not string.find(Name, "Ship") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 30000 then
             if Questtween then Questtween:Stop() end
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",
-                Vector3.new(-6508.5581054688, 89.034996032715, -132.83953857422))
+                tuandz Hub3.new(-6508.5581054688, 89.034996032715, -132.83953857422))
         elseif (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 10 then --(CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 250
             if Questtween then Questtween:Stop() end
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrameQuest
@@ -10456,30 +10456,30 @@ spawn(function()
             if Modstween then Modstween:Stop() end
             wait(.5)
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",
-                Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
+                tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875))
         elseif OldWorld and not (Name == "Fishman Commando" or Name == "Fishman Warrior") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000 then
             if Modstween then Modstween:Stop() end
             wait(.5)
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",
-                Vector3.new(3864.8515625, 6.6796875, -1926.7841796875))
+                tuandz Hub3.new(3864.8515625, 6.6796875, -1926.7841796875))
         elseif OldWorld and (Name == "God's Guard" or Name == "Sky Bandit" or Name == "Dark Master") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 3000 then
             if Modstween then Modstween:Stop() end
             wait(.5)
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",
-                Vector3.new(-4607.8227539063, 872.54248046875, -1667.5568847656))
+                tuandz Hub3.new(-4607.8227539063, 872.54248046875, -1667.5568847656))
         elseif OldWorld and (Name == "Shanda" or Name == "Royal Squad" or Name == "Royal Soldier") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 5000 then
             if Modstween then Modstween:Stop() end
             wait(.5)
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",
-                Vector3.new(-7894.6176757813, 5547.1416015625, -380.29119873047))
+                tuandz Hub3.new(-7894.6176757813, 5547.1416015625, -380.29119873047))
         elseif NewWorld and string.find(Name, "Ship") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 30000 then
             if Modstween then Modstween:Stop() end
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",
-                Vector3.new(923.21252441406, 126.9760055542, 32852.83203125))
+                tuandz Hub3.new(923.21252441406, 126.9760055542, 32852.83203125))
         elseif NewWorld and not string.find(Name, "Ship") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 30000 then
             if Modstween then Modstween:Stop() end
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",
-                Vector3.new(-6508.5581054688, 89.034996032715, -132.83953857422))
+                tuandz Hub3.new(-6508.5581054688, 89.034996032715, -132.83953857422))
         elseif (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150 then
             if Modstween then 
                 Modstween:Stop()
@@ -10523,8 +10523,8 @@ local Cam = workspace.CurrentCamera
         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
             if v.Name == QuestCheck()[3] then
                 local ePos, vissss = workspace.CurrentCamera:WorldToViewportPoint(v[trg_part].Position)
-                local AccPos = Vector2.new(ePos.x, ePos.y)
-                local mousePos = Vector2.new(workspace.CurrentCamera.ViewportSize.x / 2, workspace.CurrentCamera.ViewportSize.y / 2)
+                local AccPos = tuandz Hub2.new(ePos.x, ePos.y)
+                local mousePos = tuandz Hub2.new(workspace.CurrentCamera.ViewportSize.x / 2, workspace.CurrentCamera.ViewportSize.y / 2)
                 local distance = (AccPos - mousePos).magnitude
                 if distance < last and vissss and hotkey == true and distance < 1500 then
                     last = distance
@@ -10573,17 +10573,17 @@ local Cam = workspace.CurrentCamera
         if World1 and (Name == "Fishman Commando" or Name == "Fishman Warrior") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000 then
             if Questtween then Questtween:Stop() end
             wait(.5)
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875))
         elseif World1 and not (Name == "Fishman Commando" or Name == "Fishman Warrior") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000 then
             if Questtween then Questtween:Stop() end
             wait(.5)
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(3864.8515625, 6.6796875, -1926.7841796875))
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(3864.8515625, 6.6796875, -1926.7841796875))
         elseif World2 and string.find(Name, "Ship") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 30000 then
             if Questtween then Questtween:Stop() end
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(923.21252441406, 126.9760055542, 32852.83203125))
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(923.21252441406, 126.9760055542, 32852.83203125))
         elseif World2 and not string.find(Name, "Ship") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 30000 then
             if Questtween then Questtween:Stop() end
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-6508.5581054688, 89.034996032715, -132.83953857422))
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(-6508.5581054688, 89.034996032715, -132.83953857422))
         elseif (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 10 then --(CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 250
             if Questtween then Questtween:Stop() end
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrameQuest
@@ -10634,7 +10634,7 @@ local Cam = workspace.CurrentCamera
                                         game:service('VirtualInputManager'):SendKeyEvent(false, "X", false, game)
                                     end
                                 elseif game:GetService("Players").LocalPlayer.Character:FindFirstChild("Human-Human: Buddha") then
-                                    if _G.SkillZ and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 and game.Players.LocalPlayer.Character.HumanoidRootPart.Size == Vector3.new(7.6, 7.676, 3.686) and DevilFruitMastery >= MasteryDevilFruit.Lvl.Z then
+                                    if _G.SkillZ and v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 and game.Players.LocalPlayer.Character.HumanoidRootPart.Size == tuandz Hub3.new(7.6, 7.676, 3.686) and DevilFruitMastery >= MasteryDevilFruit.Lvl.Z then
                                     else
                                         game:service('VirtualInputManager'):SendKeyEvent(true, "Z", false, game)
                                         wait(.1)
@@ -10699,10 +10699,10 @@ local Cam = workspace.CurrentCamera
                             end
                         else
                             game:GetService('VirtualUser'):CaptureController()
-                            game:GetService('VirtualUser'):ClickButton1(Vector2.new(851, 158),game:GetService("Workspace").Camera.CFrame)
+                            game:GetService('VirtualUser'):ClickButton1(tuandz Hub2.new(851, 158),game:GetService("Workspace").Camera.CFrame)
                             UseSkillMasteryDevilFruit = false
                             EquipWeapon(_G.SelectWeapon)
-                            v.HumanoidRootPart.Size = Vector3.new(80, 80, 80)
+                            v.HumanoidRootPart.Size = tuandz Hub3.new(80, 80, 80)
                             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * MethodFarm
                         end
                     end
@@ -10716,25 +10716,25 @@ local Cam = workspace.CurrentCamera
         if OldWorld and (Name == "Fishman Commando" or Name == "Fishman Warrior") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000 then
             if Modstween then Modstween:Stop() end
             wait(.5)
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(61163.8515625, 11.6796875, 1819.7841796875))
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(61163.8515625, 11.6796875, 1819.7841796875))
         elseif OldWorld and not (Name == "Fishman Commando" or Name == "Fishman Warrior") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 50000 then
             if Modstween then Modstween:Stop() end
             wait(.5)
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(3864.8515625, 6.6796875, -1926.7841796875))
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(3864.8515625, 6.6796875, -1926.7841796875))
         elseif OldWorld and (Name == "God's Guard" or Name == "Sky Bandit" or Name == "Dark Master") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 3000 then
             if Modstween then Modstween:Stop() end
             wait(.5)
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-4607.8227539063, 872.54248046875, -1667.5568847656))
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(-4607.8227539063, 872.54248046875, -1667.5568847656))
         elseif OldWorld and (Name == "Shanda" or Name == "Royal Squad" or Name == "Royal Soldier") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 5000 then
             if Modstween then Modstween:Stop() end
             wait(.5)
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-7894.6176757813, 5547.1416015625, -380.29119873047))
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(-7894.6176757813, 5547.1416015625, -380.29119873047))
         elseif NewWorld and string.find(Name, "Ship") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 30000 then
             if Modstween then Modstween:Stop() end
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(923.21252441406, 126.9760055542, 32852.83203125))
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(923.21252441406, 126.9760055542, 32852.83203125))
         elseif NewWorld and not string.find(Name, "Ship") and (CFrameQuest.Position - game:GetService("Players").LocalPlayer.Character:WaitForChild("HumanoidRootPart").Position).magnitude > 30000 then
             if Modstween then Modstween:Stop() end
-            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",Vector3.new(-6508.5581054688, 89.034996032715, -132.83953857422))
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("requestEntrance",tuandz Hub3.new(-6508.5581054688, 89.034996032715, -132.83953857422))
         elseif (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 150 then
             if Modstween then 
                 Modstween:Stop()
@@ -11352,7 +11352,7 @@ spawn(function()
                             sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
                             v.Humanoid.Health = 0
                             v.HumanoidRootPart.CanCollide = false
-                            v.HumanoidRootPart.Size = Vector3.new(50,50,50)
+                            v.HumanoidRootPart.Size = tuandz Hub3.new(50,50,50)
 							v.HumanoidRootPart.Transparency = 0.5
                         until not _G.KillAura or v.Humanoid.Health <= 0 or not v.Parent
                     end)
@@ -11696,7 +11696,7 @@ pcall(function()
             if not isnil(v.Character.Head) and not v.Character.Head:FindFirstChild('NameEsp' .. Number) then
                 local bill = Instance.new('BillboardGui', v.Character.Head)
                 bill.Name = 'NameEsp' .. Number
-                bill.ExtentsOffset = Vector3.new(0, 1, 0)
+                bill.ExtentsOffset = tuandz Hub3.new(0, 1, 0)
                 bill.Size = UDim2.new(1, 200, 1, 30)
                 bill.Adornee = v.Character.Head
                 bill.AlwaysOnTop = true
@@ -11734,7 +11734,7 @@ pcall(function()
             if not v:FindFirstChild('NameEsp') then
                 local bill = Instance.new('BillboardGui', v)
                 bill.Name = 'NameEsp'
-                bill.ExtentsOffset = Vector3.new(0, 1, 0)
+                bill.ExtentsOffset = tuandz Hub3.new(0, 1, 0)
                 bill.Size = UDim2.new(1, 200, 1, 30)
                 bill.Adornee = v
                 bill.AlwaysOnTop = true
@@ -11767,7 +11767,7 @@ pcall(function()
             if not v:FindFirstChild('NameEsp') then
                 local bill = Instance.new('BillboardGui', v)
                 bill.Name = 'NameEsp'
-                bill.ExtentsOffset = Vector3.new(0, 1, 0)
+                bill.ExtentsOffset = tuandz Hub3.new(0, 1, 0)
                 bill.Size = UDim2.new(1, 200, 1, 30)
                 bill.Adornee = v
                 bill.AlwaysOnTop = true
@@ -11801,7 +11801,7 @@ pcall(function()
                 if not v:FindFirstChild('NameEsp' .. Number) then
                     local bill = Instance.new('BillboardGui', v)
                     bill.Name = 'NameEsp' .. Number
-                    bill.ExtentsOffset = Vector3.new(0, 1, 0)
+                    bill.ExtentsOffset = tuandz Hub3.new(0, 1, 0)
                     bill.Size = UDim2.new(1, 200, 1, 30)
                     bill.Adornee = v
                     bill.AlwaysOnTop = true
@@ -11844,7 +11844,7 @@ pcall(function()
             if not v.Handle:FindFirstChild('NameEsp' .. Number) then
                 local bill = Instance.new('BillboardGui', v.Handle)
                 bill.Name = 'NameEsp' .. Number
-                bill.ExtentsOffset = Vector3.new(0, 1, 0)
+                bill.ExtentsOffset = tuandz Hub3.new(0, 1, 0)
                 bill.Size = UDim2.new(1, 200, 1, 30)
                 bill.Adornee = v.Handle
                 bill.AlwaysOnTop = true
@@ -11878,7 +11878,7 @@ pcall(function()
             if not v:FindFirstChild('NameEsp' .. Number) then
                 local bill = Instance.new('BillboardGui', v)
                 bill.Name = 'NameEsp' .. Number
-                bill.ExtentsOffset = Vector3.new(0, 1, 0)
+                bill.ExtentsOffset = tuandz Hub3.new(0, 1, 0)
                 bill.Size = UDim2.new(1, 200, 1, 30)
                 bill.Adornee = v
                 bill.AlwaysOnTop = true
@@ -11918,7 +11918,7 @@ if v:IsA("Tool") then
         if not v.Handle:FindFirstChild('NameEsp' .. Number) then
             local bill = Instance.new('BillboardGui', v.Handle)
             bill.Name = 'NameEsp' .. Number
-            bill.ExtentsOffset = Vector3.new(0, 1, 0)
+            bill.ExtentsOffset = tuandz Hub3.new(0, 1, 0)
             bill.Size = UDim2.new(1, 200, 1, 30)
             bill.Adornee = v.Handle
             bill.AlwaysOnTop = true
@@ -11948,7 +11948,7 @@ if v:IsA("Tool") then
         if not v.Handle:FindFirstChild('NameEsp' .. Number) then
             local bill = Instance.new('BillboardGui', v.Handle)
             bill.Name = 'NameEsp' .. Number
-            bill.ExtentsOffset = Vector3.new(0, 1, 0)
+            bill.ExtentsOffset = tuandz Hub3.new(0, 1, 0)
             bill.Size = UDim2.new(1, 200, 1, 30)
             bill.Adornee = v.Handle
             bill.AlwaysOnTop = true
@@ -11978,7 +11978,7 @@ if v:IsA("Tool") then
         if not v.Handle:FindFirstChild('NameEsp' .. Number) then
             local bill = Instance.new('BillboardGui', v.Handle)
             bill.Name = 'NameEsp' .. Number
-            bill.ExtentsOffset = Vector3.new(0, 1, 0)
+            bill.ExtentsOffset = tuandz Hub3.new(0, 1, 0)
             bill.Size = UDim2.new(1, 200, 1, 30)
             bill.Adornee = v.Handle
             bill.AlwaysOnTop = true
@@ -12011,7 +12011,7 @@ pcall(function()
             if not isnil(v.Character.Head) and not v.Character.Head:FindFirstChild('NameEsp' .. Number) then
                 local bill = Instance.new('BillboardGui', v.Character.Head)
                 bill.Name = 'NameEsp' .. Number
-                bill.ExtentsOffset = Vector3.new(0, 1, 0)
+                bill.ExtentsOffset = tuandz Hub3.new(0, 1, 0)
                 bill.Size = UDim2.new(1, 200, 1, 30)
                 bill.Adornee = v.Character.Head
                 bill.AlwaysOnTop = true
@@ -12227,7 +12227,7 @@ pcall(function()
                     if not v:FindFirstChild('EspMirage') then
                         local bill = Instance.new('BillboardGui',v)
                         bill.Name = 'EspMirage'
-                        bill.ExtentsOffset = Vector3.new(0, 1, 0)
+                        bill.ExtentsOffset = tuandz Hub3.new(0, 1, 0)
                         bill.Size = UDim2.new(1,200,1,30)
                         bill.Adornee = v
                         bill.AlwaysOnTop = true
@@ -12282,7 +12282,7 @@ local function round(n)
                         if not v:FindFirstChild('EspKitsune') then
                             local bill = Instance.new('BillboardGui',v)
                             bill.Name = 'EspKitsune'
-                            bill.ExtentsOffset = Vector3.new(0, 1, 0)
+                            bill.ExtentsOffset = tuandz Hub3.new(0, 1, 0)
                             bill.Size = UDim2.new(1,200,1,30)
                             bill.Adornee = v
                             bill.AlwaysOnTop = true
@@ -12418,11 +12418,11 @@ game:GetService("RunService").RenderStepped:Connect(function()
 if _G.LockMoon then
     game:GetService("ReplicatedStorage").Remotes.CommE:FireServer("ActivateAbility")
 
-    local pos = Vector3.new(0, 0, 0)
+    local pos = tuandz Hub3.new(0, 0, 0)
     local lookAt = Lighting:GetMoonDirection()
     local cameraCFrame = CFrame.new(pos, lookAt)
     workspace.CurrentCamera.CFrame = cameraCFrame
-    local CameraDirection = Root.CFrame:toObjectSpace(cameraCFrame).lookVector.unit
+    local CameraDirection = Root.CFrame:toObjectSpace(cameraCFrame).looktuandz Hub.unit
     if Neck and Lock then
         Neck.C0 = CFNew(0, YOffset, 0) * CFAng(0, -asin(CameraDirection.x), 0) * CFAng(asin(CameraDirection.y), 0, 0)
     end
@@ -12525,14 +12525,14 @@ function onProximity()
     local part = game:GetService("Workspace").Map["Temple of Time"].MainDoor1
     local TweenService = game:GetService("TweenService")
     local startPosition = part.Position
-    local endPosition = startPosition + Vector3.new(0, -50, 0)
+    local endPosition = startPosition + tuandz Hub3.new(0, -50, 0)
     local tweenInfo = TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
     local tween = TweenService:Create(part, tweenInfo, { Position = endPosition })
     tween:Play()
     local partnew = game:GetService("Workspace").Map["Temple of Time"].MainDoor2
     local TweenService = game:GetService("TweenService")
     local startPosition = partnew.Position
-    local endPosition = startPosition + Vector3.new(0, -50, 0)
+    local endPosition = startPosition + tuandz Hub3.new(0, -50, 0)
     local tweenInfo = TweenInfo.new(10, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
     local tween = TweenService:Create(partnew, tweenInfo, { Position = endPosition })
     tween:Play()
@@ -12729,12 +12729,12 @@ if _G.Mode == "English" then
                                     end
                                     PosMon = v.HumanoidRootPart.CFrame
                                     v.Head.CanCollide = false
-                                    v.HumanoidRootPart.Size = Vector3.new(100,100,100)
+                                    v.HumanoidRootPart.Size = tuandz Hub3.new(100,100,100)
                                     FastAttack = true
                                     toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
                                     if not FastAttack then
                                         game:GetService 'VirtualUser':CaptureController()
-                                        game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                        game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                     end
                                     PosMon = v.HumanoidRootPart.CFrame
                                 until not _G.AutoEvent or not v.Parent or v.Humanoid.Health == 0 or not game.Workspace.Enemies:FindFirstChild(v.Name) 
@@ -12750,7 +12750,7 @@ if _G.Mode == "English" then
             spawn(function()
                 while wait() do
                     if _G.QRepairBoat then
-                    repeat wait() toTarget(CFrame.new(-16529.4922, 75.8897476, 310.603882, -0.292773664, -7.61506485e-08, -0.956181765, -4.15630765e-08, 1, -6.69141258e-08, 0.956181765, 2.01511625e-08, -0.292773664)) until (Vector3.new(-16529.4922, 75.8897476, 310.603882, -0.292773664, -7.61506485e-08, -0.956181765, -4.15630765e-08, 1, -6.69141258e-08, 0.956181765, 2.01511625e-08, -0.292773664) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 or not _G.QRepairBoat
+                    repeat wait() toTarget(CFrame.new(-16529.4922, 75.8897476, 310.603882, -0.292773664, -7.61506485e-08, -0.956181765, -4.15630765e-08, 1, -6.69141258e-08, 0.956181765, 2.01511625e-08, -0.292773664)) until (tuandz Hub3.new(-16529.4922, 75.8897476, 310.603882, -0.292773664, -7.61506485e-08, -0.956181765, -4.15630765e-08, 1, -6.69141258e-08, 0.956181765, 2.01511625e-08, -0.292773664) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 or not _G.QRepairBoat
                     local args = {
                         [1] = "Shipwright"
                     }
@@ -12774,7 +12774,7 @@ if _G.Mode == "English" then
                         Vec("<Color=Red>เวอร์ชั่นภาษาไทย\n:ฆ่าฉลาม 20 ตัว,<Color=/>")
                     end
                     wait(1)
-                    repeat wait()  toTarget(CFrame.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667)) until  (Vector3.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 or not _G.QRepaiBoat
+                    repeat wait()  toTarget(CFrame.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667)) until  (tuandz Hub3.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 or not _G.QRepaiBoat
                   
                     end
                 end
@@ -12785,7 +12785,7 @@ if _G.Mode == "English" then
                 spawn(function()
                     while wait() do
                         if _G.QRepairBoat2 then
-                            repeat wait() toTarget(CFrame.new(-16529.4922, 75.8897476, 310.603882, -0.292773664, -7.61506485e-08, -0.956181765, -4.15630765e-08, 1, -6.69141258e-08, 0.956181765, 2.01511625e-08, -0.292773664)) until (Vector3.new(-16529.4922, 75.8897476, 310.603882, -0.292773664, -7.61506485e-08, -0.956181765, -4.15630765e-08, 1, -6.69141258e-08, 0.956181765, 2.01511625e-08, -0.292773664) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 or not _G.QRepairBoat2
+                            repeat wait() toTarget(CFrame.new(-16529.4922, 75.8897476, 310.603882, -0.292773664, -7.61506485e-08, -0.956181765, -4.15630765e-08, 1, -6.69141258e-08, 0.956181765, 2.01511625e-08, -0.292773664)) until (tuandz Hub3.new(-16529.4922, 75.8897476, 310.603882, -0.292773664, -7.61506485e-08, -0.956181765, -4.15630765e-08, 1, -6.69141258e-08, 0.956181765, 2.01511625e-08, -0.292773664) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 or not _G.QRepairBoat2
                         local args = {
                             [1] = "Shipwright"
                         }
@@ -12906,7 +12906,7 @@ if _G.Mode == "English" then
         _G.Bboat = value
         while _G.Bboat do wait()
             toTarget(CFrame.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667))
-                if (Vector3.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 5 and CheckNotifyBuy() == false then
+                if (tuandz Hub3.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 5 and CheckNotifyBuy() == false then
                     repeat wait()
                     if SelectBoat then 
                         local args = {
@@ -13045,12 +13045,12 @@ else
                                     end
                                     PosMon = v.HumanoidRootPart.CFrame
                                     v.Head.CanCollide = false
-                                    v.HumanoidRootPart.Size = Vector3.new(100,100,100)
+                                    v.HumanoidRootPart.Size = tuandz Hub3.new(100,100,100)
                                     FastAttack = true
                                     toTarget(v.HumanoidRootPart.CFrame * MethodFarm)
                                     if not FastAttack then
                                         game:GetService 'VirtualUser':CaptureController()
-                                        game:GetService 'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                        game:GetService 'VirtualUser':Button1Down(tuandz Hub2.new(1280, 672))
                                     end
                                     PosMon = v.HumanoidRootPart.CFrame
                                 until not _G.AutoEvent or not v.Parent or v.Humanoid.Health == 0 or not game.Workspace.Enemies:FindFirstChild(v.Name) 
@@ -13066,7 +13066,7 @@ else
             spawn(function()
                 while wait() do
                     if _G.QRepairBoat then
-                    repeat wait() toTarget(CFrame.new(-16529.4922, 75.8897476, 310.603882, -0.292773664, -7.61506485e-08, -0.956181765, -4.15630765e-08, 1, -6.69141258e-08, 0.956181765, 2.01511625e-08, -0.292773664)) until (Vector3.new(-16529.4922, 75.8897476, 310.603882, -0.292773664, -7.61506485e-08, -0.956181765, -4.15630765e-08, 1, -6.69141258e-08, 0.956181765, 2.01511625e-08, -0.292773664) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 or not _G.QRepairBoat
+                    repeat wait() toTarget(CFrame.new(-16529.4922, 75.8897476, 310.603882, -0.292773664, -7.61506485e-08, -0.956181765, -4.15630765e-08, 1, -6.69141258e-08, 0.956181765, 2.01511625e-08, -0.292773664)) until (tuandz Hub3.new(-16529.4922, 75.8897476, 310.603882, -0.292773664, -7.61506485e-08, -0.956181765, -4.15630765e-08, 1, -6.69141258e-08, 0.956181765, 2.01511625e-08, -0.292773664) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 or not _G.QRepairBoat
                     local args = {
                         [1] = "Shipwright"
                     }
@@ -13090,7 +13090,7 @@ else
                         Vec("<Color=Red>เวอร์ชั่นภาษาไทย\n:ฆ่าฉลาม 20 ตัว,<Color=/>")
                     end
                     wait(1)
-                    repeat wait()  toTarget(CFrame.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667)) until  (Vector3.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 or not _G.QRepaiBoat
+                    repeat wait()  toTarget(CFrame.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667)) until  (tuandz Hub3.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 or not _G.QRepaiBoat
                   
                     end
                 end
@@ -13101,7 +13101,7 @@ else
                 spawn(function()
                     while wait() do
                         if _G.QRepairBoat2 then
-                            repeat wait() toTarget(CFrame.new(-16529.4922, 75.8897476, 310.603882, -0.292773664, -7.61506485e-08, -0.956181765, -4.15630765e-08, 1, -6.69141258e-08, 0.956181765, 2.01511625e-08, -0.292773664)) until (Vector3.new(-16529.4922, 75.8897476, 310.603882, -0.292773664, -7.61506485e-08, -0.956181765, -4.15630765e-08, 1, -6.69141258e-08, 0.956181765, 2.01511625e-08, -0.292773664) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 or not _G.QRepairBoat2
+                            repeat wait() toTarget(CFrame.new(-16529.4922, 75.8897476, 310.603882, -0.292773664, -7.61506485e-08, -0.956181765, -4.15630765e-08, 1, -6.69141258e-08, 0.956181765, 2.01511625e-08, -0.292773664)) until (tuandz Hub3.new(-16529.4922, 75.8897476, 310.603882, -0.292773664, -7.61506485e-08, -0.956181765, -4.15630765e-08, 1, -6.69141258e-08, 0.956181765, 2.01511625e-08, -0.292773664) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 or not _G.QRepairBoat2
                         local args = {
                             [1] = "Shipwright"
                         }
@@ -13222,7 +13222,7 @@ else
         _G.Bboat = value
         while _G.Bboat do wait()
             toTarget(CFrame.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667))
-                if (Vector3.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 5 and CheckNotifyBuy() == false then
+                if (tuandz Hub3.new(-16931.9766, 9.08636189, 444.637634, 0.247219667, 3.04388195e-08, 0.968959451, -2.25711698e-08, 1, -2.56551314e-08, -0.968959451, -1.55280944e-08, 0.247219667) - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 5 and CheckNotifyBuy() == false then
                     repeat wait()
                     if SelectBoat then 
                         local args = {
@@ -13902,7 +13902,7 @@ while total2 < total do
     local i = 0
     while i < 25000 and total2 < total do
         game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryContainer.Right.Content.ScrollingFrame.CanvasPosition =
-            Vector2.new(0, i)
+            tuandz Hub2.new(0, i)
         for k, v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Main.InventoryContainer.Right.Content.ScrollingFrame.Frame:GetChildren()) do
             if v:IsA("Frame") and not rac[v.ItemName.Text] and v.ItemName.Visible == true then
                 local vaihuhu = GetRaity(v.Background.BackgroundColor3)
@@ -13981,11 +13981,11 @@ for k, v in pairs(allitem) do
     cac2.AutomaticSize = 2
 end
 local ListHuhu = {
-    ["Superhuman"] = Vector2.new(3, 2),
-    ["DeathStep"] = Vector2.new(4, 3),
-    ["ElectricClaw"] = Vector2.new(2, 0),
-    ["SharkmanKarate"] = Vector2.new(0, 0),
-    ["DragonTalon"] = Vector2.new(1, 5)
+    ["Superhuman"] = tuandz Hub2.new(3, 2),
+    ["DeathStep"] = tuandz Hub2.new(4, 3),
+    ["ElectricClaw"] = tuandz Hub2.new(2, 0),
+    ["SharkmanKarate"] = tuandz Hub2.new(0, 0),
+    ["DragonTalon"] = tuandz Hub2.new(1, 5)
 }
 local MeleeG = Instance.new("Frame", Left)
 MeleeG.BackgroundTransparency = 1
@@ -14004,7 +14004,7 @@ for k, v in pairs(cac) do
     if ListHuhu[v] and game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buy" .. v, true) == 1 then
         local huhu = Instance.new("ImageLabel", MeleeG)
         huhu.Image = "rbxassetid://9945562382"
-        huhu.ImageRectSize = Vector2.new(100, 100)
+        huhu.ImageRectSize = tuandz Hub2.new(100, 100)
         huhu.ImageRectOffset = ListHuhu[v] * 100
     end
 end
@@ -14012,10 +14012,10 @@ function formatNumber(v)
     return tostring(v):reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "")
 end
 
-game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli.AnchorPoint = Vector2.new(0.5, 0.5)
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli.AnchorPoint = tuandz Hub2.new(0.5, 0.5)
 game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli.Position = UDim2.new(0, 1120, 0, 700)
 
-game:GetService("Players").LocalPlayer.PlayerGui.Main.Level.AnchorPoint = Vector2.new(0.5, 0.5)
+game:GetService("Players").LocalPlayer.PlayerGui.Main.Level.AnchorPoint = tuandz Hub2.new(0.5, 0.5)
 game:GetService("Players").LocalPlayer.PlayerGui.Main.Level.Position = UDim2.new(0, 1150, 0, 750)
 local Name = game:GetService("Players").LocalPlayer.PlayerGui.Main.Fragments:Clone()
 Name.Name = "Name"
@@ -14148,7 +14148,7 @@ function InfAbility()
 if _G.InfAbility then
     if not game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility") then
         local inf = Instance.new("ParticleEmitter")
-        inf.Acceleration = Vector3.new(0, 0, 0)
+        inf.Acceleration = tuandz Hub3.new(0, 0, 0)
         inf.Archivable = true
         inf.Drag = 20
         inf.EmissionDirection = Enum.NormalId.Top
@@ -14166,7 +14166,7 @@ if _G.InfAbility then
         inf.RotSpeed = NumberRange.new(999, 9999)
         inf.Rotation = NumberRange.new(0, 0)
         inf.Speed = NumberRange.new(30, 30)
-        inf.SpreadAngle = Vector2.new(360, 360)
+        inf.SpreadAngle = tuandz Hub2.new(360, 360)
         inf.Texture = "rbxassetid://243098098"
         inf.VelocityInheritance = 0
         inf.ZOffset = 2
@@ -14394,11 +14394,11 @@ function Fly()
             local speed = 0
             local bg = Instance.new("BodyGyro", torso)
             bg.P = 9e4
-            bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+            bg.maxTorque = tuandz Hub3.new(9e9, 9e9, 9e9)
             bg.cframe = torso.CFrame
             local bv = Instance.new("BodyVelocity", torso)
-            bv.velocity = Vector3.new(0,0.1,0)
-            bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+            bv.velocity = tuandz Hub3.new(0,0.1,0)
+            bv.maxForce = tuandz Hub3.new(9e9, 9e9, 9e9)
             if nowe == true then
                 plr.Character.Humanoid.PlatformStand = true
             end
@@ -14416,12 +14416,12 @@ function Fly()
                     end
                 end
                 if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
-                    bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+                    bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.looktuandz Hub * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
                     lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
                 elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
-                    bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+                    bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.looktuandz Hub * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
                 else
-                    bv.velocity = Vector3.new(0,0,0)
+                    bv.velocity = tuandz Hub3.new(0,0,0)
                 end
                 --	game.Players.LocalPlayer.Character.Animate.Disabled = true
                 bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
@@ -14445,11 +14445,11 @@ function Fly()
             local speed = 0
             local bg = Instance.new("BodyGyro", UpperTorso)
             bg.P = 9e4
-            bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+            bg.maxTorque = tuandz Hub3.new(9e9, 9e9, 9e9)
             bg.cframe = UpperTorso.CFrame
             local bv = Instance.new("BodyVelocity", UpperTorso)
-            bv.velocity = Vector3.new(0,0.1,0)
-            bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+            bv.velocity = tuandz Hub3.new(0,0.1,0)
+            bv.maxForce = tuandz Hub3.new(9e9, 9e9, 9e9)
             if nowe == true then
                 plr.Character.Humanoid.PlatformStand = true
             end
@@ -14468,12 +14468,12 @@ function Fly()
                     end
                 end
                 if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
-                    bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+                    bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.looktuandz Hub * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
                     lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
                 elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
-                    bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+                    bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.looktuandz Hub * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
                 else
-                    bv.velocity = Vector3.new(0,0,0)
+                    bv.velocity = tuandz Hub3.new(0,0,0)
                 end
     
                 bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
@@ -14688,7 +14688,7 @@ page12:Toggle("Auto Click",false,function(value)
             if _G.click then
                  pcall(function()
                     game:GetService'VirtualUser':CaptureController()
-                    game:GetService'VirtualUser':Button1Down(Vector2.new(0,1,0,1))
+                    game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(0,1,0,1))
                 end)
             end
         end)
@@ -14705,7 +14705,7 @@ page12:Toggle("ออโต้คลิก",false,function(value)
             if _G.click then
                  pcall(function()
                     game:GetService'VirtualUser':CaptureController()
-                    game:GetService'VirtualUser':Button1Down(Vector2.new(0,1,0,1))
+                    game:GetService'VirtualUser':Button1Down(tuandz Hub2.new(0,1,0,1))
                 end)
             end
         end)
@@ -14885,9 +14885,9 @@ if _G.Mode == "English" then
             while task.wait() do
                 pcall(function()
                     if _G.WalkWater then
-                        game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,112,1000)
+                        game:GetService("Workspace").Map["WaterBase-Plane"].Size = tuandz Hub3.new(1000,112,1000)
                     else
-                        game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,80,1000)
+                        game:GetService("Workspace").Map["WaterBase-Plane"].Size = tuandz Hub3.new(1000,80,1000)
                     end
                 end)
             end
@@ -14905,9 +14905,9 @@ else
             while task.wait() do
                 pcall(function()
                     if _G.WalkWater then
-                        game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,112,1000)
+                        game:GetService("Workspace").Map["WaterBase-Plane"].Size = tuandz Hub3.new(1000,112,1000)
                     else
-                        game:GetService("Workspace").Map["WaterBase-Plane"].Size = Vector3.new(1000,80,1000)
+                        game:GetService("Workspace").Map["WaterBase-Plane"].Size = tuandz Hub3.new(1000,80,1000)
                     end
                 end)
             end
